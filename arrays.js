@@ -48,7 +48,26 @@ var cristian = {
 
 var personas = [fran, juanda, paola, liz, marce, cristian]
 
-for (var i = 0; i < personas.length; i++) {
-    var persona = personas[i];
-    console.log(`${persona.nombre} mide ${persona.altura} metros`);
-}
+// for (var i = 0; i < personas.length; i++) {
+//     var persona = personas[i];
+//     console.log(`${persona.nombre} mide ${persona.altura} metros`);
+// }
+
+//FILTERS
+
+//versión larga
+// const esAlta = (persona) =>{
+//     return persona.altura>1.7
+// }
+// var personasAltas = personas.filter(esAlta)//lleva una condición
+// console.log(personasAltas)
+
+//versión larga 2
+// var personasAltas = personas.filter(function(persona){
+//     return persona.altura > 1.7
+// })
+// console.log(personasAltas)
+
+//versión reducida
+var personasAltas = personas.filter(persona => persona.altura > 1.7)
+console.log(personasAltas)
