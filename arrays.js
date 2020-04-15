@@ -69,5 +69,31 @@ var personas = [fran, juanda, paola, liz, marce, cristian]
 // console.log(personasAltas)
 
 //versión reducida
-var personasAltas = personas.filter(persona => persona.altura > 1.7)
-console.log(personasAltas)
+// var personasAltas = personas.filter(persona => persona.altura > 1.7)
+// console.log(personasAltas)
+
+//MAP: transformar un array
+
+//Alterará el mismo array
+// const pasarAlturaCms=(persona)=>{
+//     persona.altura*=100
+//     return persona
+// }
+
+//Hará un segundo array
+// const pasarAlturaCms=(persona)=>{    
+//     return {
+//         ...persona,
+//         altura: persona.altura * 100
+//     }
+// }
+
+//regresar el array como un objeto
+const pasarAlturaCms = persona => ({
+    ...persona,
+    altura: persona.altura * 100
+})
+
+var personasCms=personas.map(pasarAlturaCms)
+console.log(personas)
+console.log(personasCms)
